@@ -1,10 +1,11 @@
-package ch.zuehlke.sbb.reddit.features.detail
+package ch.zuehlke.sbb.reddit.features.news.detail
 
 import ch.zuehlke.sbb.reddit.R
 import ch.zuehlke.sbb.reddit.features.AdapterConstants
 import ch.zuehlke.sbb.reddit.features.GenericBindingBaseAdapter
 import ch.zuehlke.sbb.reddit.features.GenericBindingViewHolder
 import ch.zuehlke.sbb.reddit.features.ViewType
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 import ch.zuehlke.sbb.reddit.models.RedditPostsData
 
 /**

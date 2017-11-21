@@ -19,19 +19,19 @@ class FakeRedditNewsRemoteDataSource// Prevent direct instantiation.
     private val REDDIT_NEWS_SERVICE_DATA = LinkedHashMap<String, RedditNewsData>()
 
     override fun getMoreNews(callback: RedditDataSource.LoadNewsCallback) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // not needed
     }
 
     override fun getPosts(callback: RedditDataSource.LoadPostsCallback, title: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // not needed
     }
 
     override fun savePosts(data: List<RedditPostsData>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // not needed
     }
 
     override fun deletePostsWithPermaLink(permaLink: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // not needed
     }
 
 

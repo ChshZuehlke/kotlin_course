@@ -9,10 +9,10 @@ import com.github.salomonbrys.kodein.scopedSingleton
  * Created by celineheldner on 16.11.17.
  */
 
-fun createLoginModule(loginFragment: LoginFragment) = Kodein.Module{
+fun createLoginModule(view: LoginContract.View) = Kodein.Module {
 
-    bind<LoginContract.Presenter>() with scopedSingleton(androidSupportFragmentScope){
-        LoginPresenter(loginFragment)
+    bind<LoginContract.Presenter>() with scopedSingleton(androidSupportFragmentScope) {
+        LoginPresenter(view)
     }
 
 }

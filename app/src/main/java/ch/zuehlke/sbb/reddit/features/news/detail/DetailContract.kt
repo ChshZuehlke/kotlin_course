@@ -1,8 +1,7 @@
-package ch.zuehlke.sbb.reddit.features.detail
+package ch.zuehlke.sbb.reddit.features.news.detail
 
 import ch.zuehlke.sbb.reddit.BasePresenter
 import ch.zuehlke.sbb.reddit.BaseView
-import ch.zuehlke.sbb.reddit.data.source.remote.model.posts.RedditPost
 import ch.zuehlke.sbb.reddit.models.RedditPostsData
 
 /**

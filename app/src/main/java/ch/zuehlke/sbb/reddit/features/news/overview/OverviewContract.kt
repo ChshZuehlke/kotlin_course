@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.overview
+package ch.zuehlke.sbb.reddit.features.news.overview
 
 import ch.zuehlke.sbb.reddit.BasePresenter
 import ch.zuehlke.sbb.reddit.BaseView
@@ -22,7 +22,7 @@ interface OverviewContract {
 
         fun showNoNews()
 
-        fun showRedditNewsDetails(redditNewsId: String)
+        fun showRedditNewsDetails(redditNewsUrl: String)
 
     }
 

@@ -5,12 +5,15 @@ import ch.zuehlke.sbb.reddit.models.RedditNewsData
 import ch.zuehlke.sbb.reddit.models.RedditPostsData
 import io.reactivex.Flowable
 import io.reactivex.Observable
+import ch.zuehlke.sbb.reddit.util.AndroidUtils
+
+import com.google.common.base.Preconditions.checkNotNull
 
 /**
  * Created by chsc on 08.11.17.
  */
 
-class RedditRepository (val newsRemoteDataSource: RedditDataSource, val newsLocalDataSource: RedditDataSource, private val context: Context) : RedditDataSource {
+class RedditRepository (val newsRemoteDataSource: RedditDataSource, val newsLocalDataSource: RedditDataSource) : RedditDataSource {
 
     private val sources = listOf(newsLocalDataSource, newsRemoteDataSource)
 

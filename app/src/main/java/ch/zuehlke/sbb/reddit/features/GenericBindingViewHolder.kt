@@ -3,6 +3,7 @@ package ch.zuehlke.sbb.reddit.features
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import ch.zuehlke.sbb.reddit.BR
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 
 
 /**

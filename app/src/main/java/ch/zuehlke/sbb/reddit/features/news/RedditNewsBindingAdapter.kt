@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.overview
+package ch.zuehlke.sbb.reddit.features.news
 
 
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import ch.zuehlke.sbb.reddit.R
-import ch.zuehlke.sbb.reddit.features.detail.DetailActivity
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 import ch.zuehlke.sbb.reddit.models.RedditNewsData
 import ch.zuehlke.sbb.reddit.util.DateUtils
 import com.google.common.base.Strings
@@ -42,8 +42,7 @@ object RedditNewsBindingAdapter{
 
     @JvmStatic
     fun showRedditPost(view: View, redditNews: RedditNewsData){
-        val intent = Intent(view.context, DetailActivity::class.java)
-        intent.putExtra(DetailActivity.EXTRA_REDDIT_NEWS_URL, redditNews.permaLink)
-        view.context.startActivity(intent)
+        TODO("delete or use!")
+        //navigationController.showDetails(redditNews.permaLink)
     }
 }

@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.overview
+package ch.zuehlke.sbb.reddit.features.news.overview
 
 import android.util.Log
 import ch.zuehlke.sbb.reddit.data.source.RedditRepository
@@ -54,7 +54,6 @@ class OverviewPresenter(private val view: OverviewContract.View, private val red
     init {
         checkNotNull(view, "OverviewView cannot be null")
         checkNotNull(redditRepository, "RedditRepository cannot be null")
-        view.setPresenter(this)
     }
 
     override fun start() {

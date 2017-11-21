@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.detail
+package ch.zuehlke.sbb.reddit.features.news.detail
 
 import android.databinding.BindingAdapter
 import android.util.TypedValue
@@ -22,7 +22,7 @@ object PostDataBindingAdapter{
     @JvmStatic
     @BindingAdapter("android:paddingLeft")
     fun setPostPadding(view: View, depth: Int){
-        (setDepthPadding(view,depth))
+        (setDepthPadding(view, depth))
     }
 
     private fun setDepthPadding(view: View, depth: Int) {

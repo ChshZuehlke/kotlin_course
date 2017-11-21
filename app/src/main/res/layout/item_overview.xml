@@ -11,6 +11,7 @@
         <variable
             name="listener"
             type="ch.zuehlke.sbb.reddit.features.GenericBindingViewHolder.GenericBindingClickListener"/>
+
     </data>
 
 

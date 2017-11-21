@@ -8,8 +8,6 @@ import android.database.Observable
 
 interface BaseView<in T> where T: BasePresenter {
 
-    fun setPresenter(presenter: T)
-
 
     val isActive: Boolean
 }

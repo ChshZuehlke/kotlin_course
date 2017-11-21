@@ -1,7 +1,8 @@
-package ch.zuehlke.sbb.reddit.features.detail
+package ch.zuehlke.sbb.reddit.features.news.detail
 
 import android.util.Log
 import ch.zuehlke.sbb.reddit.data.source.RedditRepository
+import ch.zuehlke.sbb.reddit.models.RedditPostsData
 import com.google.common.base.Preconditions.checkNotNull
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -22,7 +23,6 @@ class DetailPresenter(detailView: DetailContract.View, repository: RedditReposit
     init {
         checkNotNull(redditUrl, "The reddit url cannot be null")
         mRedditUrl = checkNotNull(redditUrl, "The reddit url cannot be null")
-        detailView.setPresenter(this)
     }
 
     override fun start() {

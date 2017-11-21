@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.overview
+package ch.zuehlke.sbb.reddit.features.news
 
 import android.support.v4.util.SparseArrayCompat
 import ch.zuehlke.sbb.reddit.R
@@ -6,6 +6,7 @@ import ch.zuehlke.sbb.reddit.features.AdapterConstants
 import ch.zuehlke.sbb.reddit.features.GenericBindingBaseAdapter
 import ch.zuehlke.sbb.reddit.features.GenericBindingViewHolder
 import ch.zuehlke.sbb.reddit.features.ViewType
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 import ch.zuehlke.sbb.reddit.models.RedditNewsData
 
 /**

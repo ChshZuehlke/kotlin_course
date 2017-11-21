@@ -1,10 +1,11 @@
-package ch.zuehlke.sbb.reddit.features.detail
+package ch.zuehlke.sbb.reddit.features.news.detail
 
 import android.databinding.ViewDataBinding
 import android.util.TypedValue
 import android.view.View
 import ch.zuehlke.sbb.reddit.BR
 import ch.zuehlke.sbb.reddit.features.GenericBindingViewHolder
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 import ch.zuehlke.sbb.reddit.models.RedditPostsData
 
 /**

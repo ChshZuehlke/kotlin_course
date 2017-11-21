@@ -1,4 +1,4 @@
-package ch.zuehlke.sbb.reddit.features.overview
+package ch.zuehlke.sbb.reddit.features.news.overview
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView

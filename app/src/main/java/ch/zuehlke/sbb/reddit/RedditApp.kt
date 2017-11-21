@@ -5,6 +5,10 @@ import android.arch.persistence.room.Room
 import ch.zuehlke.sbb.reddit.models.MIGRATION_1_2
 import com.github.salomonbrys.kodein.*
 import de.dabotz.shoppinglist.database.AppDatabase
+import com.github.salomonbrys.kodein.Kodein
+import com.github.salomonbrys.kodein.KodeinAware
+import com.github.salomonbrys.kodein.android.androidActivityScope
+import com.github.salomonbrys.kodein.lazy
 
 /**
  * Created by chsc on 12.11.17.
@@ -22,4 +26,11 @@ class RedditApp : Application(), KodeinAware{
                     .build() }
     }
 
+
+    override fun onCreate() {
+        super.onCreate()
+        registerActivityLifecycleCallbacks(
+                androidActivityScope.lifecycleManager
+        )
+    }
 }

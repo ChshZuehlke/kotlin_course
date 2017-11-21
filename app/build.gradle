@@ -99,6 +99,9 @@ dependencies {
     kapt "com.android.databinding:compiler:$plugin_version"
 
 
+    testImplementation "com.nhaarman:mockito-kotlin-kt1.1:$test_nhaarman_kotlin_mockito_version"
+    testImplementation "org.mockito:mockito-core:$test_mockito_version"
+
 }
 repositories {
     mavenCentral()

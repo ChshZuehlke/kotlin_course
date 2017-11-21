@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import ch.zuehlke.sbb.reddit.features.news.NavigationController
 
 /**
  * Created by chsc on 15.11.17.
