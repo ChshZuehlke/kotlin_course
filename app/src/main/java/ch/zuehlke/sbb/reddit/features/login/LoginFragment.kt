@@ -131,6 +131,12 @@ class LoginFragment : BaseFragment(), LoginContract.View {
         ).show();
     }
 
+    override fun showLoginError(message: String) {
+        Toast.makeText(view!!.context,
+                message,
+                Toast.LENGTH_LONG).show()
+    }
+
     override fun showRedditNews() {
         val intent = Intent(context, NewsActivity::class.java)
         startActivity(intent)

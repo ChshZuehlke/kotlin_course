@@ -20,6 +20,8 @@ interface LoginContract {
         fun showRedditNews()
 
         fun showInvalidPasswordTimeout(secondsToWait: Int)
+
+        fun showLoginError(message: String)
     }
 
     interface Presenter : BasePresenter {

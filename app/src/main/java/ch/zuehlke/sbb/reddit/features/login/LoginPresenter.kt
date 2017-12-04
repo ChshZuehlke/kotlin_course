@@ -32,29 +32,49 @@ class LoginPresenter(view: LoginContract.View) : LoginContract.Presenter {
         // Simulate a 'long' network call to verify the credentials
 
         launch(UI) {
-            delay(1000, TimeUnit.MILLISECONDS)
+            doLogin(userEmail, password)
             if (mLoginView.isActive) {
-
-                var hasError = false
-                if (userEmail != "test.tester@test.com") {
-                    mLoginView.showInvalidUsername()
-                    hasError = true
-                }
-
-                if (password != "123456") {
-                    mLoginView.showInvalidPassword()
-                    hasError = true
-
-                    mLoginView.showInvalidPasswordTimeout(10)
-                    delay(10, TimeUnit.SECONDS)
-                }
-
-                if (!hasError) {
-                    mLoginView.showRedditNews()
-                }
                 mLoginView.setLoadingIndicator(false)
             }
         }
+    }
+
+    private suspend fun doLogin(userName: String, password: String) {
+        try {
+            var hasError = false
+            if (!checkUsername(userName)) {
+                mLoginView.showInvalidUsername()
+                hasError = true
+            }
+
+            if (!verifyPassword(password, userName)) {
+                mLoginView.showInvalidPassword()
+                hasError = true
+            }
+
+            if (!hasError) {
+                mLoginView.showRedditNews()
+            }
+        } catch (e: Exception) {
+            mLoginView.showLoginError(e.message ?: "Unbekannter Fehler")
+        }
+    }
+
+    private suspend fun verifyPassword(password: String, userEmail: String) : Boolean {
+        val passwordValid = password == "123456"
+        if(!passwordValid) {
+            mLoginView.showInvalidPasswordTimeout(10)
+            delay(10, TimeUnit.SECONDS)
+        }
+        return passwordValid
+    }
+
+    private suspend fun checkUsername(userEmail: String) : Boolean {
+        delay(1000, TimeUnit.MILLISECONDS)
+        if(userEmail.endsWith("ch")) {
+            throw IllegalArgumentException("Switzerland is NOT allowed!")
+        }
+        return userEmail == "test.tester@test.com"
     }
 
 
