@@ -18,7 +18,7 @@ class PasswordViewModel(private val context: Context): BaseObservable(){
 
     var password : String by Delegates.observable("Enter a password",{_, oldValue, newValue ->
         if(oldValue != newValue){
-            error = if(verifyPasswordLength(newValue.toString())) null else context.getString(R.string.login_screen_invalid_password_length)
+            error = if(verifyPasswordLength(newValue)) null else context.getString(R.string.login_screen_invalid_password_length)
             notifyPropertyChanged(BR.passwordQuality)
             notifyPropertyChanged(BR.passwordError)
         }
