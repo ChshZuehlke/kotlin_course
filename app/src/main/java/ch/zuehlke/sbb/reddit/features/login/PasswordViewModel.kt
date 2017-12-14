@@ -16,16 +16,15 @@ import kotlin.properties.Delegates
 
 class PasswordViewModel(private val context: Context): BaseObservable(){
 
-    private var password : String by Delegates.observable("Enter a password",{_, oldValue, newValue ->
+    var password : String by Delegates.observable("Enter a password",{_, oldValue, newValue ->
         if(oldValue != newValue){
+            error = if(verifyPasswordLength(newValue.toString())) null else context.getString(R.string.login_screen_invalid_password_length)
             notifyPropertyChanged(BR.passwordQuality)
+            notifyPropertyChanged(BR.passwordError)
         }
     })
 
-    private var error: String? by Delegates.observable<String?>(null,{_, oldValue, newValue ->
-        notifyPropertyChanged(BR.passwordError)
-    })
-
+    private var error: String? = null
 
     @Bindable
     fun getPasswordQuality(): String {
@@ -43,22 +42,6 @@ class PasswordViewModel(private val context: Context): BaseObservable(){
     @Bindable
     fun getPasswordError() = error
 
-    @Bindable
-    fun getPasswordTextWatcher(): TextWatcher {
-        return object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Do nothing.
-            }
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                password = s.toString()
-            }
-
-            override fun afterTextChanged(s: Editable) {
-                error = if(verifyPasswordLength(s.toString())) null else context.getString(R.string.login_screen_invalid_password_length)
-             }
-        }
-    }
 
     private fun verifyPasswordLength(password: String): Boolean {
         return !Strings.isNullOrEmpty(password) && password.length >= 6

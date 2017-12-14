@@ -91,7 +91,7 @@ entered password
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/login_screen_password_hint"
-                    app:textChangedListener="@{passwordViewModel.passwordTextWatcher}"
+                    android:text="@={passwordViewModel.password}"
                     app:errorText="@{passwordViewModel.passwordError}"
 
                     />
