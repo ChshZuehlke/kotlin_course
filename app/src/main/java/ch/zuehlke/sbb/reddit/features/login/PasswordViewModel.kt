@@ -22,7 +22,7 @@ class PasswordViewModel(private val context: Context): BaseObservable(){
         }
     })
 
-    private var error: String? by Delegates.observable<String?>(null,{_, oldValue, newValue ->
+    private var error: String? by Delegates.observable<String?>(null,{_, _, _ ->
         notifyPropertyChanged(BR.passwordError)
     })
 
