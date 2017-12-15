@@ -15,6 +15,7 @@
 
         <activity
             android:name=".features.login.LoginActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.OverlapSystemBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".features.news.NewsActivity"></activity>
+        <activity android:name=".features.news.NewsActivity"
+            android:screenOrientation="portrait"
+            ></activity>
 
     </application>
 
