@@ -1,7 +1,5 @@
 package ch.zuehlke.sbb.reddit.models
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
 import ch.zuehlke.sbb.reddit.features.news.overview.adapter.AdapterConstants
 import ch.zuehlke.sbb.reddit.features.news.overview.adapter.ViewType
 
